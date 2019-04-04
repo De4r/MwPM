@@ -1,0 +1,64 @@
+clc
+clear all
+
+k= 1000;
+t1=10;
+t= linspace(0,t1,k);
+T=2;
+w=2*pi/T;
+A=1;
+
+n=50;
+x = zeros(size(t));
+
+for i=1:2:2*n
+    temp = 1/i * sin(i*w*t);
+    x = x + temp;
+end
+x = x*4*A/pi;
+
+% prosty sztywny sposob
+prost = zeros(1,200);
+prost([1 101])=0;
+prost(2:100)=1;
+prost(102:200)=-1;
+prost=[prost prost prost prost prost];
+figure(1)
+plot(prost)
+
+j=0;
+
+% 1 ze sposobow
+prostokatny = zeros(size(t));
+for i=1:length(prostokatny)
+    if i==1+j*T*k/t1 || i==101+j*T*k/t1
+        prostokatny(1,i) = 0;
+    end
+    if i>1+j*T*k/t1 && i<101+j*T*k/t1
+        prostokatny(1,i) = 1;
+    end
+    if i>101+j*T*k/t1 && i<201+j*T*k/t1
+        prostokatny(1,i) = -1;
+    end
+    if i-1==200+j*T*k/t1
+        j=j+1;
+    end
+end
+%funkcja dzialajaca dla gdy t1 = t(end) = wielokrotnosc T
+rect = rectan(t,1,T);
+e = zeros(size(x));
+for i=1:length(x)
+    if prostokatny(i) == 0
+        e(i) = 0;
+    else
+        e(i) = abs(prostokatny(i) - x(i))/abs(prostokatny(i));
+    end
+end
+e2 = abs(rect - x)./abs(rect);
+e2(isnan(e2))=0;
+e2(isinf(e2))=0;
+e2 = sum(e2)*100/length(t)
+e = sum(e)*100/length(t)
+
+figure(2)
+plot(t,x,t,rect,'.')
