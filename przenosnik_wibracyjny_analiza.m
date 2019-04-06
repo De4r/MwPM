@@ -4,7 +4,7 @@ close all
 % parpool
 
 t0 = 0;
-tk = 100;
+tk = 150;
 % krok = 0.1;
 % t = t0:krok:tk-krok;
 t = [t0, tk];
