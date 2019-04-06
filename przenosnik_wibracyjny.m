@@ -1,33 +1,33 @@
 function dX=przenosnik_wibracyjny(t, X)
+% ------------------------ parametry --------------------------------
+m1 = 3.86; %kg masy nie wywazone
+e = 0.02; %cm
+mk= 70; %kg mkorpusu+2*mstoj+2*mwalow+2*mrotorow
+Jc = 10; %kgm2 moment bezwladnosci korpusu
+Jc1 = 0.5; %kgm2 moment bezwldnosci masy nie wywazonej wzgledem jej sr ciez.
+Js1 = 0.1; %kgm2 moment bezwaldnosci stojanu
+Jw1 = 0.1; %kgm2 moment bezwladnosci wirnika i rotora
+R=0.001; % wspol restytucji
+K=1; % cos tam szwarca
+bx = 100; % wspol tlum na X
+by = 100; % wspol tlum na Y
+kx = 25000; % wpol sprez na X
+ky = 2000; % wspol sprez na Y
+l = 0.5; %m
+H = 0.15; %m
+a = 0.225; %m
+beta = pi/3;
+% --------------------nadawa------------------
+mn1 = 1; %kg
+mn2 = 1; %kg
+u = 0.3; % wspol tracia
+g = 9.81;
+% ----------------------  zmienne  -------------------------------------
+walfa = X(1); vx = X(2); vy = X(3); wfi1 = X(4); wfi2 = X(5); %predkosci
+alfa = X(6); x = X(7); y = X(8); fi1 = X(9); fi2 = X(10); % przemieszcenia
+vx1 = X(11); vy1 = X(12); vx2 = X(13); vy2 = X(14); % predkosci
+x1 = X(15); y1 = X(16); x2 = X(17); y2 = X(18); % przemieszczenia
 if t<50
-    % ------------------------ parametry --------------------------------
-    m1 = 3.86; %kg masy nie wywazone
-    e = 0.02; %cm
-    mk= 70; %kg mkorpusu+2*mstoj+2*mwalow+2*mrotorow
-    Jc = 15; %kgm2 moment bezwladnosci korpusu
-    Jc1 = 1.5; %kgm2 moment bezwldnosci masy nie wywazonej wzgledem jej sr ciez.
-    Js1 = 1; %kgm2 moment bezwaldnosci stojanu
-    Jw1 = 1; %kgm2 moment bezwladnosci wirnika i rotora
-    R=0.001; % wspol restytucji
-    K=1; % cos tam szwarca
-    bx = 100; % wspol tlum na X
-    by = 100; % wspol tlum na Y
-    kx = 25000; % wpol sprez na X
-    ky = 2000; % wspol sprez na Y
-    l = 0.5; %m
-    H = 0.15; %m
-    a = 0.225; %m
-    beta = pi/3;
-    % --------------------nadawa------------------
-    mn1 = 10; %kg
-    mn2 = 10; %kg
-    u = 0.3; % wspol tracia
-    g = 9.81;
-    % ----------------------  zmienne  -------------------------------------
-    walfa = X(1); vx = X(2); vy = X(3); wfi1 = X(4); wfi2 = X(5); %predkosci
-    alfa = X(6); x = X(7); y = X(8); fi1 = X(9); fi2 = X(10); % przemieszcenia
-    vx1 = X(11); vy1 = X(12); vx2 = X(13); vy2 = X(14); % predkosci
-    x1 = X(15); y1 = X(16); x2 = X(17); y2 = X(18); % przemieszczenia
     %  -----------------------------  macierz mas  --------------------------
     diagonala = [Jc+2*m1*a^2, 2*m1+mk, 2*m1+mk, Jc1+Js1+Jw1+m1*e^2, Jc1+Js1+Jw1+m1*e^2, 1, 1, 1, 1, 1, mn1, mn1, mn2, mn2, 1, 1, 1, 1];
     M = diag(diagonala);
@@ -90,34 +90,6 @@ if t<50
     X(18) = 0; % po y2
     dX=M\X;  
 else
-        % ------------------------ parametry --------------------------------
-    m1 = 3.86; %kg masy nie wywazone
-    e = 0.02; %cm
-    mk= 70; %kg mkorpusu+2*mstoj+2*mwalow+2*mrotorow
-    Jc = 15; %kgm2 moment bezwladnosci korpusu
-    Jc1 = 1.5; %kgm2 moment bezwldnosci masy nie wywazonej wzgledem jej sr ciez.
-    Js1 = 1; %kgm2 moment bezwaldnosci stojanu
-    Jw1 = 1; %kgm2 moment bezwladnosci wirnika i rotora
-    R=0.001; % wspol restytucji
-    K=1; % cos tam szwarca
-    bx = 1000; % wspol tlum na X
-    by = 1000; % wspol tlum na Y
-    kx = 250000; % wpol sprez na X
-    ky = 20000; % wspol sprez na Y
-    l = 0.5; %m
-    H = 0.15; %m
-    a = 0.225; %m
-    beta = pi/3;
-    % --------------------nadawa------------------
-    mn1 = 10; %kg
-    mn2 = 10; %kg
-    u = 0.3; % wspol tracia
-    g = 9.81;
-    % ----------------------  zmienne  -------------------------------------
-    walfa = X(1); vx = X(2); vy = X(3); wfi1 = X(4); wfi2 = X(5); %predkosci
-    alfa = X(6); x = X(7); y = X(8); fi1 = X(9); fi2 = X(10); % przemieszcenia
-    vx1 = X(11); vy1 = X(12); vx2 = X(13); vy2 = X(14); % predkosci
-    x1 = X(15); y1 = X(16); x2 = X(17); y2 = X(18); % przemieszczenia
     %  -----------------------------  macierz mas  --------------------------
     diagonala = [Jc+2*m1*a^2, 2*m1+mk, 2*m1+mk, Jc1+Js1+Jw1+m1*e^2, Jc1+Js1+Jw1+m1*e^2, 1, 1, 1, 1, 1, mn1, mn1, mn2, mn2, 1, 1, 1, 1];
     M = diag(diagonala);
@@ -148,8 +120,8 @@ else
     % ------------wyznacznie sil nadawy ------------------
     F12 = (y1-y2)*K*(1-(1-R^2)/2*(1-sign(y1-y2)*sign(vy1-vy2)));
     Fr1 = (y-y1)*K*(1-(1-R^2)/2*(1-sign(y-y1)*sign(vy-vy1)));
-    T12 = u*F12*sign(vx1-vx);
-    Tr1 = u*Fr1*sign(vx2-vx1);
+    T12 = -u*F12*sign(vx1-vx);
+    Tr1 = -u*Fr1*sign(vx2-vx1);
     %  ------------------------- macierz wyrazów wolnych ----------------------
     X(1) = Mel1-Mel2-2*H*bx*vx-2*H*kx*x-2*H^2*kx*alfa-2*H^2*bx*walfa-2*ky*l^2*alfa-2*by*l^2*walfa+m1*e*a*(sin(beta-alfa-fi1)*wfi1^2+sin(beta-alfa+fi2)*wfi2^2); % po walfa
     X(2) = -Tr1-m1*e*cos(fi1)*wfi1^2+m1*e*cos(fi2)*wfi2^2-2*bx*vx-2*kx*x-2*H*kx*alfa-2*H*bx*walfa; % po vx

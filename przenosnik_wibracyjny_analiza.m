@@ -4,9 +4,10 @@ close all
 % parpool
 
 t0 = 0;
-tk = 50;
-krok = 0.1;
-t = t0:krok:tk-krok;
+tk = 100;
+% krok = 0.1;
+% t = t0:krok:tk-krok;
+t = [t0, tk];
 
 y0 = zeros(1,18);
 tic
@@ -17,7 +18,7 @@ yopis = {['$Predkosc\ katowa\ \frac{rad}{s}$'], ['$Predkosc\ \frac{m}{s}$'], ['$
 tytuly = {['$Predkosc\ katowa\ dla\ \alpha$'], ['$Przem.\ katowe\ dla\ \alpha$'], ['$Predkosc\ dla\ x$'], ['$Przemieszczenie\ dla\ x$']...
     ['$Predkosc\ dla\ y$'], ['$Przemieszczenie\ dla\ y$'], ['$Predkosc\ katowa\ dla\ \phi_1$'], ['$Przem.\ katowe\ dla\ \phi_1$']...
     ['$Predkosc\ katowa\ dla\ \phi_2$'], ['$Przem.\ katowe\ dla\ \phi_2$'], ['$Predkosc\ dla\ x_1$']...
-    ['$Predkosc\ dla\ y_1$'], ['$Predkosc dla x_2$'], ['$Predkosc\ dla\ y_2$'], ['$Predkosc\ dla\ y_2$'], ['$Przemieszcenie\ dla\ x_1$']...
+    ['$Predkosc\ dla\ y_1$'], ['$Predkosc\ dla\ x_2$'], ['$Predkosc\ dla\ y_2$'],  ['$Przemieszcenie\ dla\ x_1$']...
     ['$Przemieszczenie\ dla\ y_1$'], ['$Przemieszczenie\ dla\ x_2$'], ['$Przemieszczenie\ dla\ y_2$']};
 yopis = string(yopis);
 tytuly = string(tytuly);
