@@ -22,6 +22,7 @@ tytuly = {['$Predkosc\ katowa\ dla\ \alpha$'], ['$Przem.\ katowe\ dla\ \alpha$']
     ['$Przemieszczenie\ dla\ y_1$'], ['$Przemieszczenie\ dla\ x_2$'], ['$Przemieszczenie\ dla\ y_2$']};
 yopis = string(yopis);
 tytuly = string(tytuly);
+save('wyniki.mat', 'Y');
 for i=1:5
     figure(i)
     subplot(211)
