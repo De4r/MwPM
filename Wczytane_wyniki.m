@@ -2,7 +2,7 @@ clc
 clear all
 close all
 
-wyniki = load('wynik.mat')
+wyniki = load('wyniki.mat')
 wyniki = cell2mat(struct2cell(wyniki));
 
 t = wyniki(:,1);

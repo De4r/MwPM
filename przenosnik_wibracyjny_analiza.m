@@ -4,14 +4,15 @@ close all
 % parpool
 
 t0 = 0;
-tk = 150;
+tk = 35;
+t1 = 25;
 % krok = 0.1;
 % t = t0:krok:tk-krok;
 t = [t0, tk];
 
 y0 = zeros(1,18);
 tic
-[t,y] = ode45('przenosnik_wibracyjny',t,y0);
+[t,y] = ode113(@(t,x) przenosnik_wibracyjny(t,x,t1),t,y0);
 toc
 xopis = ['$Czas\ [s]$'];
 yopis = {['$Predkosc\ katowa\ \frac{rad}{s}$'], ['$Predkosc\ \frac{m}{s}$'], ['$Przem.\ katowe\ [rad]$'], ['$Przem.\ [m]$']};
@@ -22,7 +23,7 @@ tytuly = {['$Predkosc\ katowa\ dla\ \alpha$'], ['$Przem.\ katowe\ dla\ \alpha$']
     ['$Przemieszczenie\ dla\ y_1$'], ['$Przemieszczenie\ dla\ x_2$'], ['$Przemieszczenie\ dla\ y_2$']};
 yopis = string(yopis);
 tytuly = string(tytuly);
-save('wyniki.mat', 'Y');
+save('wyniki.mat', 'y');
 for i=1:5
     figure(i)
     subplot(211)
@@ -64,4 +65,3 @@ for i=1:4
     ylabel({yopis(4)},'Interpreter','latex')
     title({tytuly(14+i)},'Interpreter','latex')
 end
-    
