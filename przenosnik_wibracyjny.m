@@ -16,7 +16,7 @@ ky = 1.0144*10^4; % wspol sprez na Y
 l = 0.5; %m
 H = 0.15; %m
 a = 0.225; %m
-beta = pi/3;
+beta = pi/6;
 % --------------------nadawa------------------
 mn1 = 0.72; %kg % dla pola 0.25m^2 i wys. 2 mm dla piasku 1440 kq/m^3
 mn2 = 0.72; %kg

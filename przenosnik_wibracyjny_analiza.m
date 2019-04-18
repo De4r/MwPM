@@ -4,8 +4,8 @@ close all
 % parpool
 
 t0 = 0;
-tk = 35;
-t1 = 25;
+tk = 25;
+t1 = 15;
 % krok = 0.1;
 % t = t0:krok:tk-krok;
 t = [t0, tk];
@@ -23,7 +23,9 @@ tytuly = {['$Predkosc\ katowa\ dla\ \alpha$'], ['$Przem.\ katowe\ dla\ \alpha$']
     ['$Przemieszczenie\ dla\ y_1$'], ['$Przemieszczenie\ dla\ x_2$'], ['$Przemieszczenie\ dla\ y_2$']};
 yopis = string(yopis);
 tytuly = string(tytuly);
-save('wyniki.mat', 'y');
+Y = [t, y];
+nazwa = ['wyniki', num2str(t1), num2str(tk),'.mat'];
+save(nazwa, "Y");
 for i=1:5
     figure(i)
     subplot(211)
