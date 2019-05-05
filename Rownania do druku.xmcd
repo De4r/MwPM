@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?validation-md5-digest 7d9922bfed0614768170f7f1ff8af6da?>
+<?validation-md5-digest a78fdc02e2170e675bb670ebc24ae739?>
 <worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
 	<pointReleaseData/>
 	<metadata>
@@ -13,9 +13,9 @@
 			<revisedBy>Abcde</revisedBy>
 		</userData>
 		<identityInfo>
-			<revision>4</revision>
+			<revision>5</revision>
 			<documentID>9BB82EC9-B0C1-44F6-B7EF-B3EB2BA092AB</documentID>
-			<versionID>60A9FA0B-E5E7-4A0B-971D-3ECBF97C07E6</versionID>
+			<versionID>9C0A59FC-A541-479B-9320-BB96B608776D</versionID>
 			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
 			<branchID>00000000-0000-0000-0000-000000000000</branchID>
 		</identityInfo>
@@ -84,7 +84,7 @@
 					<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
 				</results>
 			</mathRendering>
-			<pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="9" orientation="portrait" print-single-page-width="false" page-width="595.5" page-height="841.5">
+			<pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="9" orientation="portrait" print-single-page-width="false" page-width="595.5" page-height="842.25">
 				<margins left="86.4" right="86.4" top="86.4" bottom="86.4"/>
 				<header use-full-page-width="false"/>
 				<footer use-full-page-width="false"/>
@@ -1514,6 +1514,11 @@
 			</math>
 			<rendering item-idref="12"/>
 		</region>
+		<region region-id="108" left="252" top="512.25" width="60.75" height="12" align-x="271.5" align-y="522" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<text use-page-width="false" push-down="false" lock-width="true">
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rownanie Alfa</p>
+			</text>
+		</region>
 		<region region-id="46" left="6" top="537" width="411" height="69" align-x="38.25" align-y="552" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math error="This placeholder is empty." optimize="false" disable-calc="false">
 				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
@@ -1883,11 +1888,6 @@
 			</math>
 			<rendering item-idref="13"/>
 		</region>
-		<region region-id="81" left="456" top="560.25" width="60.75" height="12" align-x="475.5" align-y="570" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
-			<text use-page-width="false" push-down="false" lock-width="true">
-				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rownanie Alfa</p>
-			</text>
-		</region>
 		<region region-id="51" left="24" top="687" width="225" height="44.25" align-x="50.25" align-y="708" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math error="This variable is undefined." optimize="false" disable-calc="false">
 				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
@@ -2195,6 +2195,11 @@
 			</math>
 			<rendering item-idref="20"/>
 		</region>
+		<region region-id="110" left="336" top="938.25" width="52.5" height="12" align-x="356.25" align-y="948" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<text use-page-width="false" push-down="false" lock-width="true">
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rownianie X</p>
+			</text>
+		</region>
 		<region region-id="75" left="12" top="957" width="411.75" height="40.5" align-x="216.75" align-y="972" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:apply xmlns:ml="http://schemas.mathsoft.com/math30">
@@ -2437,11 +2442,6 @@
 			</math>
 			<rendering item-idref="21"/>
 		</region>
-		<region region-id="78" left="486" top="974.25" width="52.5" height="12" align-x="506.25" align-y="984" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
-			<text use-page-width="false" push-down="false" lock-width="true">
-				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rownianie X</p>
-			</text>
-		</region>
 		<region region-id="82" left="12" top="999" width="359.25" height="40.5" align-x="190.5" align-y="1014" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:apply xmlns:ml="http://schemas.mathsoft.com/math30">
@@ -2672,12 +2672,17 @@
 			</math>
 			<rendering item-idref="22"/>
 		</region>
-		<region region-id="84" left="450" top="1010.25" width="51.75" height="12" align-x="469.5" align-y="1020" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="112" left="360" top="1022.25" width="51.75" height="12" align-x="379.5" align-y="1032" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<text use-page-width="false" push-down="false" lock-width="true">
 				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rownanie Y</p>
 			</text>
 		</region>
-		<region region-id="85" left="12" top="1053" width="397.5" height="57" align-x="210" align-y="1068" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="119" left="120" top="1040.25" width="52.5" height="12" align-x="136.5" align-y="1050" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<text use-page-width="false" push-down="false" lock-width="true">
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rowanie fi 1</p>
+			</text>
+		</region>
+		<region region-id="117" left="12" top="1065" width="397.5" height="57" align-x="210" align-y="1080" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:apply xmlns:ml="http://schemas.mathsoft.com/math30">
 					<ml:plus split="true"/>
@@ -3016,12 +3021,7 @@
 			</math>
 			<rendering item-idref="23"/>
 		</region>
-		<region region-id="87" left="444" top="1064.25" width="52.5" height="12" align-x="460.5" align-y="1074" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
-			<text use-page-width="false" push-down="false" lock-width="true">
-				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rowanie fi 1</p>
-			</text>
-		</region>
-		<region region-id="88" left="12" top="1107" width="397.5" height="57" align-x="210" align-y="1122" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="118" left="12" top="1119" width="397.5" height="57" align-x="210" align-y="1134" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:apply xmlns:ml="http://schemas.mathsoft.com/math30">
 					<ml:plus split="true"/>
@@ -3360,7 +3360,7 @@
 			</math>
 			<rendering item-idref="24"/>
 		</region>
-		<region region-id="90" left="438" top="1112.25" width="57.75" height="12" align-x="457.5" align-y="1122" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="120" left="354" top="1160.25" width="57.75" height="12" align-x="373.5" align-y="1170" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<text use-page-width="false" push-down="false" lock-width="true">
 				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Rownanie fi 2</p>
 			</text>

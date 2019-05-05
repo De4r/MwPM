@@ -5,7 +5,7 @@ close all
 
 t0 = 0;
 tk = 25;
-t1 = 15;
+t1 = 7;
 % krok = 0.1;
 % t = t0:krok:tk-krok;
 t = [t0, tk];

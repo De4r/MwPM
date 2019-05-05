@@ -2,7 +2,8 @@ clc
 clear all
 close all
 
-wyniki = load('wyniki12.mat');
+nazwa = 'wyniki1525';
+wyniki = load([nazwa, '.mat']);
 wyniki = cell2mat(struct2cell(wyniki));
 
 t = wyniki(:,1);

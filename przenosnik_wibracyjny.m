@@ -51,11 +51,12 @@ if t<t1
     Mrob_ut=p*Mrob_el;            %moment utyku silnika roboczego
     srob_nom=(n_synchr-nrob_nom)/n_synchr;  %poœliz nominalny silnika roboczego
     srob_ut=srob_nom*(p+sqrt(p*p-1));       %poœlizg utyku nominalny silnika roboczego
-
+    w_ut = w_synchr*(1-srob_ut);
     % ------------------obliczenie momentow elektrycznych ---------------------
-    Mel1=((2*Mrob_ut*srob_ut*((w_synchr-wfi1)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi1)/w_synchr)*((w_synchr-wfi1)/w_synchr)));
-    Mel2=((2*Mrob_ut*srob_ut*((w_synchr-wfi2)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi2)/w_synchr)*((w_synchr-wfi2)/w_synchr)));
-
+%     Mel1=((2*Mrob_ut*srob_ut*((w_synchr-wfi1)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi1)/w_synchr)*((w_synchr-wfi1)/w_synchr)));
+%     Mel2=((2*Mrob_ut*srob_ut*((w_synchr-wfi2)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi2)/w_synchr)*((w_synchr-wfi2)/w_synchr)));
+      Mel1 = (2*Mrob_ut*(w_synchr-w_ut)*(w_synchr-wfi1))/((w_synchr-w_ut)^2+(w_synchr-wfi1)^2);
+      Mel2 = (2*Mrob_ut*(w_synchr-w_ut)*(w_synchr-wfi2))/((w_synchr-w_ut)^2+(w_synchr-wfi2)^2);
     % ------------wyznacznie sil nadawy ------------------
 %     F12 = (y1-y2)*K*(1-(1-R^2)/2*(1-sign(y1-y2)*sign(vy1-vy2)));
 %     Fr1 = (y-y1)*K*(1-(1-R^2)/2*(1-sign(y-y1)*sign(vy-vy1)));
@@ -111,13 +112,14 @@ else
     w_synchr=(pi*n_synchr)/30;  %omega synchroniczna
     Mrob_el=Prob_nom*1000/(w_znam);  %moment silnika roboczego
     Mrob_ut=p*Mrob_el;            %moment utyku silnika roboczego
-    srob_nom=(n_synchr-nrob_nom)/n_synchr;  %poœliz nominalny silnika roboczego
+    srob_nom=(n_synchr-n_nom)/n_synchr;  %poœliz nominalny silnika roboczego
     srob_ut=srob_nom*(p+sqrt(p*p-1));       %poœlizg utyku nominalny silnika roboczego
-
+    w_ut = w_synchr*(1-srob_ut);
     % ------------------obliczenie momentow elektrycznych ---------------------
-    Mel1=((2*Mrob_ut*srob_ut*((w_synchr-wfi1)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi1)/w_synchr)*((w_synchr-wfi1)/w_synchr)));
-    Mel2=((2*Mrob_ut*srob_ut*((w_synchr-wfi2)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi2)/w_synchr)*((w_synchr-wfi2)/w_synchr)));
-
+%     Mel1=((2*Mrob_ut*srob_ut*((w_synchr-wfi1)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi1)/w_synchr)*((w_synchr-wfi1)/w_synchr)));
+%     Mel2=((2*Mrob_ut*srob_ut*((w_synchr-wfi2)/w_synchr))/(srob_ut*srob_ut+((w_synchr-wfi2)/w_synchr)*((w_synchr-wfi2)/w_synchr)));
+    Mel1 = (2*Mrob_ut*(w_synchr-w_ut)*(w_synchr-wfi1))/((w_synchr-w_ut)^2+(w_synchr-wfi1)^2);
+    Mel2 = (2*Mrob_ut*(w_synchr-w_ut)*(w_synchr-wfi2))/((w_synchr-w_ut)^2+(w_synchr-wfi2)^2);
     % ------------wyznacznie sil nadawy ------------------
     F12 = (y1-y2)*K*(1-((1-R^2)/2)*(1-sign(y1-y2)*sign(vy1-vy2)));
     Fr1 = (y-y1)*K*(1-((1-R^2)/2)*(1-sign(y-y1)*sign(vy-vy1)));
