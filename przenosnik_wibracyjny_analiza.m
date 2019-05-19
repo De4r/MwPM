@@ -4,8 +4,9 @@ close all
 % parpool
 
 t0 = 0;
-tk = 25;
-t1 = 7;
+tk = 15;
+t1 = 30;
+t2=5;
 % krok = 0.1;
 % t = t0:krok:tk-krok;
 t = [t0, tk];
@@ -13,6 +14,7 @@ t = [t0, tk];
 y0 = zeros(1,18);
 tic
 [t,y] = ode113(@(t,x) przenosnik_wibracyjny(t,x,t1),t,y0);
+%[t,y] = ode113(@(t,x) przenosnik_wibracyjny1(t,x,t1,t2),t,y0);
 toc
 xopis = ['$Czas\ [s]$'];
 yopis = {['$Predkosc\ katowa\ \frac{rad}{s}$'], ['$Predkosc\ \frac{m}{s}$'], ['$Przem.\ katowe\ [rad]$'], ['$Przem.\ [m]$']};

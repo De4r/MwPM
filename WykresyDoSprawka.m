@@ -1,6 +1,6 @@
 clc
 close all
-nazwa = 'wyniki1525';
+nazwa = 'wyniki_bez_sil3015';
 wyniki = load([nazwa, '.mat']);
 wyniki = cell2mat(struct2cell(wyniki));
 
