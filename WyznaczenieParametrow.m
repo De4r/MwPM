@@ -13,15 +13,46 @@ S = (0.1^-1)*9.81; % [mV* m/s^2] to jest 9,81 na 0.1 V
 %wyznaczenie przyspieszenia V/S
 A(:,2:end) = A(:,2:end)/0.1*9.81;
 A1 = movmean(A,30);
+
+
 figure(1)
 
+plot(A(:,1), A(:,2), 'b')
+hold on
+plot(A1(:,1), A1(:,2),'r')
+hold on
+zero = zeros(length(A(:,1)),1);
+plot(A1(:,1), zero)
+grid on
+title('Drgania w pionie, bez masy dodatkowej')
+xlabel('Czas [s]')
+ylabel('Amplituda [m/s^2]')
+
+figure(2)
+plot(A(:,1), A(:,3), 'b')
+hold on
+plot(A1(:,1), A1(:,3),'r')
+hold on
+zero = zeros(length(A(:,1)),1);
+plot(A1(:,1), zero)
+grid on
+title('Drgania w pionie, z masa dodatkowa')
+xlabel('Czas [s]')
+ylabel('Amplituda [m/s^2]')
+
+figure(3)
 plot(A(:,1), A(:,4), 'b')
 hold on
 plot(A1(:,1), A1(:,4),'r')
 hold on
 zero = zeros(length(A(:,1)),1);
 plot(A1(:,1), zero)
+grid on
+title('Drgania w poziomie, bez masy dodatkowej')
+xlabel('Czas [s]')
+ylabel('Amplituda [m/s^2]')
 
+%%%%%%%%%%%
 y11 = 2.695;
 y21 = 2.127;
 T1 = 0.35;

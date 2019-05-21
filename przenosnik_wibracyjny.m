@@ -28,6 +28,7 @@ walfa = X(1); vx = X(2); vy = X(3); wfi1 = X(4); wfi2 = X(5); %predkosci
 alfa = X(6); x = X(7); y = X(8); fi1 = X(9); fi2 = X(10); % przemieszcenia
 vx1 = X(11); vy1 = X(12); vx2 = X(13); vy2 = X(14); % predkosci
 x1 = X(15); y1 = X(16); x2 = X(17); y2 = X(18); % przemieszczenia
+
 if t<t1
     %  -----------------------------  macierz mas  --------------------------
     diagonala = [Jc+2*m1*a^2, 2*m1+mk, 2*m1+mk, Jc1+Js1+Jw1+m1*e^2, Jc1+Js1+Jw1+m1*e^2, 1, 1, 1, 1, 1, mn1, mn1, mn2, mn2, 1, 1, 1, 1];

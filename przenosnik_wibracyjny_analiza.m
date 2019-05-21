@@ -4,7 +4,7 @@ close all
 % parpool
 
 t0 = 0;
-tk = 15;
+tk = 29;
 t1 = 30;
 t2=5;
 % krok = 0.1;
@@ -12,8 +12,10 @@ t2=5;
 t = [t0, tk];
 
 y0 = zeros(1,18);
+% wybór analizy wibracyjny - normalna + nadawa (t1), wibracyjny1 - 1 silnik
+% do t2, nadawa od t1
 tic
-[t,y] = ode113(@(t,x) przenosnik_wibracyjny(t,x,t1),t,y0);
+[t,y] = ode45(@(t,x) przenosnik_wibracyjny(t,x,t1),t,y0);
 %[t,y] = ode113(@(t,x) przenosnik_wibracyjny1(t,x,t1,t2),t,y0);
 toc
 xopis = ['$Czas\ [s]$'];
@@ -26,8 +28,8 @@ tytuly = {['$Predkosc\ katowa\ dla\ \alpha$'], ['$Przem.\ katowe\ dla\ \alpha$']
 yopis = string(yopis);
 tytuly = string(tytuly);
 Y = [t, y];
-nazwa = ['wyniki', num2str(t1), num2str(tk),'.mat'];
-save(nazwa, "Y");
+nazwa = ['wyniki_x', num2str(t1), num2str(tk),'.mat'];
+%save(nazwa, "Y");
 for i=1:5
     figure(i)
     subplot(211)

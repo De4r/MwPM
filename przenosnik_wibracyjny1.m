@@ -9,8 +9,8 @@ Js1 = 0.0013/2 ; %kgm2 moment bezwaldnosci stojanu
 Jw1 = 0.0013/2; %kgm2 moment bezwladnosci wirnika i rotora
 R=0.01; % wspol restytucji
 K=1.5*10^8; % cos tam szwarca
-bx = 6.882; % wspol tlum na X
-by = 4.2571; % wspol tlum na Y
+bx =100;% 6.882; % wspol tlum na X
+by =100;% 4.2571; % wspol tlum na Y
 kx = 1.2714*10^4; % wpol sprez na X
 ky = 1.0144*10^4; % wspol sprez na Y
 l = 0.5; %m
@@ -28,6 +28,7 @@ walfa = X(1); vx = X(2); vy = X(3); wfi1 = X(4); wfi2 = X(5); %predkosci
 alfa = X(6); x = X(7); y = X(8); fi1 = X(9); fi2 = X(10); % przemieszcenia
 vx1 = X(11); vy1 = X(12); vx2 = X(13); vy2 = X(14); % predkosci
 x1 = X(15); y1 = X(16); x2 = X(17); y2 = X(18); % przemieszczenia
+
 if t<t1
     %  -----------------------------  macierz mas  --------------------------
     diagonala = [Jc+2*m1*a^2, 2*m1+mk, 2*m1+mk, Jc1+Js1+Jw1+m1*e^2, Jc1+Js1+Jw1+m1*e^2, 1, 1, 1, 1, 1, mn1, mn1, mn2, mn2, 1, 1, 1, 1];

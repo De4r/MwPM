@@ -1,6 +1,9 @@
 clc
 close all
-nazwa = 'wyniki_bez_sil3015';
+nazwa = 'wyniki1525';
+% nazwa = 'wyniki4645';
+% nazwa = 'wyniki_bez_sil3015';
+% nazwa = 'wyniki_x3029';
 wyniki = load([nazwa, '.mat']);
 wyniki = cell2mat(struct2cell(wyniki));
 
@@ -31,7 +34,7 @@ for i=1:5
     set(gca,'fontsize',14)
     
     nazwazapisu = [nazwa, num2str(i),'.png'];
-    print(gcf,nazwazapisu,'-dpng','-r300'); 
+    %print(gcf,nazwazapisu,'-dpng','-r300'); 
 end
 
 for i=1:2
@@ -47,7 +50,7 @@ for i=1:2
     legend([string(legenda(i)),string(legenda(i+2))],'Interpreter','latex')
     set(gca,'fontsize',14)
     nazwazapisu = [nazwa, num2str(i),num2str(i),'.png'];
-    print(gcf,nazwazapisu,'-dpng','-r300'); 
+    %print(gcf,nazwazapisu,'-dpng','-r300'); 
 end
 
 figure(10)
@@ -60,7 +63,7 @@ grid on
 axis equal
 set(gca,'fontsize',14)
 nazwazapisu = [nazwa,'trajek.png'];
-print(gcf,nazwazapisu,'-dpng','-r300'); 
+%print(gcf,nazwazapisu,'-dpng','-r300'); 
 
 figure(11)
 figure('units','normalized','outerposition',[0 0 1 1])
@@ -71,7 +74,7 @@ ylabel({yopis(3)}, 'Interpreter','latex')
 grid on
 set(gca,'fontsize',14)
 nazwazapisu = [nazwa,'katy1.png'];
-print(gcf,nazwazapisu,'-dpng','-r300'); 
+%print(gcf,nazwazapisu,'-dpng','-r300'); 
 
 figure(12)
 figure('units','normalized','outerposition',[0 0 1 1])
@@ -82,4 +85,15 @@ ylabel({yopis(1)}, 'Interpreter','latex')
 grid on
 set(gca,'fontsize',14)
 nazwazapisu = [nazwa,'katy2.png'];
-print(gcf,nazwazapisu,'-dpng','-r300'); 
+%print(gcf,nazwazapisu,'-dpng','-r300'); 
+
+
+
+figure(14)
+figure('units','normalized','outerposition',[0 0 1 1])
+plot(y(:,15),y(:,16),'Linewidth',1.5)
+title({'$Trajktoria\ ruchu\ 1\ warstwy$'}, 'Interpreter','latex')
+xlabel({'$x_1\ [m]$'}, 'Interpreter','latex')
+ylabel({'$y_1\ [m]$'}, 'Interpreter','latex')
+grid on
+set(gca,'fontsize',14)
